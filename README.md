@@ -6,21 +6,21 @@ This project uses machine learning to create a model that predicts which passeng
 
 ## Instructions
 Three files are provided by Kaggle:
-- train.csv: this is the training file. It contains all of the variables needed for the analysis (see below). The PassengerId included go from 1 to 891.
-- test.csv: this is the testing file. It contains the same variables as the train.csv file, except for the one we are trying to predict (Survival). The PassengerId included go from 892 to 1309.
-- gender_submission.csv: it contains the survival information of the passangers that are included in the test.csv file
+- `train.csv`: this is the training file. It contains all of the variables needed for the analysis (see below). The PassengerId included go from 1 to 891.
+- `test.csv`: this is the testing file. It contains the same variables as the train.csv file, except for the one we are trying to predict (Survival). The PassengerId included go from 892 to 1309.
+- `gender_submission.csv`: it contains the survival information of the passangers that are included in the test.csv file
 
 The variables containes in the datasets are:
-- survival: 0 = No, 1 = Yes
-- pclass: 1 = 1st, 2 = 2nd, 3 = 3rd
-- sex:	Sex
-- Age:	Age in years	
-- sibsp:	# of siblings / spouses aboard the Titanic
-- parch:	# of parents / children aboard the Titanic
-- ticket:	Ticket number
-- fare:	Passenger fare
-- cabin:	Cabin number
-- embarked:	Port of Embarkation	(C = Cherbourg, Q = Queenstown, S = Southampton)
+- `survival`: 0 = No, 1 = Yes
+- `pclass`: 1 = 1st, 2 = 2nd, 3 = 3rd
+- `sex`:	Sex
+- `Age`:	Age in years	
+- `sibsp`:	# of siblings / spouses aboard the Titanic
+- `parch`:	# of parents / children aboard the Titanic
+- `ticket`:	Ticket number
+- `fare`:	Passenger fare
+- `cabin`:	Cabin number
+- `embarked`:	Port of Embarkation	(C = Cherbourg, Q = Queenstown, S = Southampton)
 
 When running the code, make sure that the filepath for the several read_excel and read_csv Panda functions have been updated correctly.
 
