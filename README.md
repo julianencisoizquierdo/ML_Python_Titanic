@@ -1,27 +1,54 @@
 # Titanic - Machine Learning from Disaster
 
 ## Content of the project
-The purpose of this project is to derive insightful observations from the main dataset (`Startup_Dataset.xlsx`). The questions that I try to answer are:
-1) What are the most successful universities?
-2) Which sectors are the most successful ones?
-3) For how long should I expect to stay private?
-4) What country is more suited for creating a startup?
-5) How much financing am I expected to obtain?
+This project uses machine learning to create a model that predicts which passengers survived the Titanic shipwreck. More details can be found in Kaggle's website: https://www.kaggle.com/competitions/titanic 
 
 
 ## Instructions
-The main file used for the analysis is `Startup_Dataset.xlsx`. This workbook contains four worksheets:
-- COMPANY: contains information about different companies, including their category, the revenue range, and the employee count
-- INVESTMENT: includes information about the financing rounds that companies in the previous sheet have gone through
-- ACQUISITION: contains information about the acquisitions completed by some of the firms contained in the sheet COMPANIES
-- EMPLOYEE: includes information about the University attended by professionals that work in some of the companies included in the dataset
+Three files are provided by Kaggle:
+- train.csv: this is the training file. It contains all of the variables needed for the analysis (see below). The PassengerId included go from 1 to 891.
+- test.csv: this is the testing file. It contains the same variables as the train.csv file, except for the one we are trying to predict (Survival). The PassengerId included go from 892 to 1309.
+- gender_submission.csv: it contains the survival information of the passangers that are included in the test.csv file
 
-Additionally, three csv files are needed in order to run the code properly:
-- `Exchange_Rates_Table.csv`: provides information on the exchange rates of several currencies at different points in time
-- `world-universities.csv`: contains a list of all of the universities in the world
-- GDP Per Capita All `countries.csv`: contains a list of the GDP per capita of all of the countries in the world
+The variables containes in the datasets are:
+- survival: 0 = No, 1 = Yes
+- pclass: 1 = 1st, 2 = 2nd, 3 = 3rd
+- sex:	Sex
+- Age:	Age in years	
+- sibsp:	# of siblings / spouses aboard the Titanic
+- parch:	# of parents / children aboard the Titanic
+- ticket:	Ticket number
+- fare:	Passenger fare
+- cabin:	Cabin number
+- embarked:	Port of Embarkation	(C = Cherbourg, Q = Queenstown, S = Southampton)
 
 When running the code, make sure that the filepath for the several read_excel and read_csv Panda functions have been updated correctly.
+
+
+## Rationale and Methodology
+
+### Data Exploration
+
+
+### Feature Engineering
+The following are the main transformations performed in the dataset:
+- Delete the Fare column. The reason is that it is very correlated with the Class column
+- Delete the Ticket column, given that it was difficult to extract any information from it
+- Delete the Cabin column, given that more than 50% of it is NA
+- Fill out the NAs of the Age column with
+    those who have “Master” in the Name column have taken the average of “Master”
+    the same applies for the “Miss”
+    the rest have taken the average of the remaining values
+- The Alone column is 1 if both SibSp and Parch are 1, 0 otherwise
+- The Age_Children (omitted) encompasses people who are below 16 years old, Age_Adult from 16 to 50, and Age_Elderly those who are older
+- Delete the Name column and the Age column
+
+
+### Machine Learning Methodology
+
+
+### Results and Discussion
+
 
 
 ## Usage
@@ -36,11 +63,8 @@ The following libraries are used in different parts of the project:
 - Numpy
 - Matplotlib.pyplot
 - Seaborn
-- Geopandas
 - Display
 - Combinations
-- Warnings
-- SettingWithCopyWarning
 
 
 Proceed to their installation with the following code:
