@@ -63,8 +63,18 @@ The following libraries are used in different parts of the project:
 - Numpy
 - Matplotlib.pyplot
 - Seaborn
-- Display
-- Combinations
+- Os
+- Xgboost
+- Lightgbm
+- Sklearn.ensemble
+- Sklearn.linear_model
+- Sklearn.svc
+- Sklearn.neighbors
+- Sklearn.naive_bayes
+- Sklearn.tree
+- Sklearn.model_selection
+- Sklearn.preprocessing
+- Sklearn.metrics
 
 
 Proceed to their installation with the following code:
@@ -74,11 +84,18 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import geopandas as gpd
-from IPython.display import display
-from itertools import combinations
-import warnings
-from pandas.errors import SettingWithCopyWarning
+import os
+import xgboost as xgb
+import lightgbm as lgb
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 ```
 
 ## Installation
