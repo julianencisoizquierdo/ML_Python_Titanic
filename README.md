@@ -53,7 +53,7 @@ The following are the main transformations performed in the dataset:
 
 ## Usage
 
-To run the analysis, open the `XXX` notebook and execute each cell sequentially. Ensure that the required datasets are in the correct file paths.
+To run the analysis, open the `titanic_julian_enciso.ipynb` notebook and execute each cell sequentially. Ensure that the required datasets are in the correct file paths.
 
 
 ## Dependencies
