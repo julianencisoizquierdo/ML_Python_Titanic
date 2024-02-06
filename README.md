@@ -1,7 +1,7 @@
 # Titanic - Machine Learning from Disaster
 
 ## Content of the project
-This project uses machine learning to create a model that predicts which passengers survived the Titanic shipwreck. More details can be found in Kaggle's website: https://www.kaggle.com/competitions/titanic 
+This project (still a WIP!) uses machine learning to create a model that predicts which passengers survived the Titanic shipwreck. More details can be found in Kaggle's website: https://www.kaggle.com/competitions/titanic 
 
 
 ## Instructions
